@@ -22,7 +22,7 @@ if [[ ("$wireguard" == "true") ]]; then
 source $STORAGE_ROOT/yiimp/.wireguard.conf
 fi
 
-echo -e " Installing MariaDB 10.4...$COL_RESET"
+echo -e " Installing MariaDB 10.3...$COL_RESET"
 MARIADB_VERSION='10.4'
 sudo debconf-set-selections <<< "maria-db-$MARIADB_VERSION mysql-server/root_password password $DBRootPassword"
 sudo debconf-set-selections <<< "maria-db-$MARIADB_VERSION mysql-server/root_password_again password $DBRootPassword"
